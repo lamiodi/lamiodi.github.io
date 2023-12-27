@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    *{
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+        font-family: "poppins" , sans-serif;
+    }
+    @media (min-width: 566px) {
+    body{
+        background-color: aqua;
+        height: 100vh;
+        padding: 10px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background: linear-gradient(135deg, #71b7e6, #9b59b6);
+    }
+    .container{
+        width: 40em;
+        max-height: 100%;
+        background-color: azure;
+        padding: 20px;
+        border-radius: 10px;
+    }
+    form{
+        display: grid;
+        width: 100%;
+        height: 100%;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 0.5fr 1fr 1fr 1fr 0.5fr 0.5fr;
+        grid-gap: 10px 20px;
+    }
+    h3{
+        grid-column: span 2;
+        
+    }
+
+    .gender{
+        grid-column: span 2;
+        margin-bottom: 20px;
+        white-space: nowrap;
+    }
+
+    .input{
+        min-width: 95%;
+        height: 40px;
+        cursor: pointer;
+        border-radius: 5px;
+        border: 1px solid #ccc;
+        padding-left: 15px;
+        outline: none;
+        font-size: 16px;
+        margin-bottom: 15px;
+        border-bottom-width: 4px;
+        transition: all 0.3s ease;
+       }
+       .input:focus,
+       .input:valid{
+        border-color: #9b59b6;
+       }
+    .field>label{
+        width: 100%;
+        font-size: 1em;
+        font-weight: bold;
+        
+        
+        
+    }
+    p{
+        display: block;
+        margin-bottom: 10px;
+        font-weight: 500;
+    }
+    
+    h4{
+        font-size: 1.19em;
+        margin-bottom: 20px;
+        font-weight: 500;
+    }
+
+    .gender>label{
+        margin-right: 12%;
+        font-size: 1em;
+        
+    }
+    .gender>label>input{
+        margin-right: 10px;
+    }
+    .button{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        grid-column: span 2;
+        margin-bottom: 30px;
+
+    }
+    #button{
+        height: 2em;
+        width: 100%;
+        color: #fff;
+        border: none;
+        font-size: 18px;
+        font-weight: 500;
+        border-radius: 5px;
+        letter-spacing: 1px;
+        background: linear-gradient(135deg, #71b7e6, #9b59b6);
+    }
+
+    #button:hover{
+        background: linear-gradient(-135deg, #71b7e6, #9b59b6);
+    }
+}
+    
+    @media (max-width: 566px) {
+         body{
+            background: linear-gradient(135deg, #71b7e6, #9b59b6);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            padding: 15px 10px;
+        
+            
+    }
+    .container{
+        width: 40em;
+        height: 100%;
+        background-color: azure;
+        border-radius: 10px;
+        padding: 10px;
+    }
+    .field{
+        display: grid;
+        grid-template-columns: 1fr;
+        height: 100%;
+        width: 100%;
+        padding: 15px;
+        overflow-y: scroll;
+        position: relative;
+        gap: 10px;
+        }
+        .field::-webkit-scrollbar{
+            width: 0;
+        }
+        
+    h3{
+        align-self: flex-start;
+        margin-bottom: 15px;
+          
+        
+
+    }
+    .field>label{
+        width: 100%;
+        font-size: 1em;
+        font-weight: bold;
+    }
+    p{
+        font-size: 1em;
+
+    }
+    .input{
+        min-width: 95%;
+        height: 40px;
+        cursor: pointer;
+        border-radius: 5px;
+        border: 1px solid #ccc;
+        padding-left: 15px;
+        outline: none;
+        font-size: 1em;
+        margin-bottom: 15px;
+        border-bottom-width: 4px;
+        transition: all 0.3s ease;
+       }
+       .input:focus,
+       .input:valid{
+        border-color: #9b59b6;
+       }
+       .gender{
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+        margin-bottom: 10px;
+        white-space: nowrap;
+        
+        
+       }
+      
+       #Dot-1{
+        grid-area: 2/1/2/1;
+
+       }
+       #Dot-2{
+        grid-area: 2/2/2/2;
+
+       }
+       #Dot-3{
+        grid-area: 2/3/2/3;
+        
+
+       }
+       .gender>label>input{
+        margin-right: 5px;
+    }
+       
+       h4{
+        font-size: 1em;
+        font-weight: 600;
+        margin-bottom: 20px;
+        
+       }
+       #button{
+        height: 2em;
+        width: 100%;
+        color: #fff;
+        border: none;
+        font-size: 18px;
+        font-weight: 500;
+        border-radius: 5px;
+        letter-spacing: 1px;
+        background: linear-gradient(135deg, #71b7e6, #9b59b6);
+    }
+       
+         }
+
+    @media (max-width: 406px) {  
+        body{
+            background: linear-gradient(135deg, #71b7e6, #9b59b6);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            padding: 15px 10px;
+        
+            
+    }
+    .container{
+        width: 40em;
+        height: 100%;
+        background-color: azure;
+        border-radius: 10px;
+        padding: 10px;
+    }
+    .field{
+        display: grid;
+        grid-template-columns: 1fr;
+        height: 100%;
+        width: 100%;
+        padding: 15px;
+        overflow-y: scroll;
+        position: relative;
+        gap: 10px;
+        }
+        .field::-webkit-scrollbar{
+            width: 0;
+        }
+        
+    h3{
+        align-self: flex-start;
+        margin-bottom: 15px;
+          
+        
+
+    }
+    .field>label{
+        width: 100%;
+        font-size: 1em;
+        font-weight: bold;
+    }
+    p{
+        font-size: 1em;
+
+    }
+    .input{
+        min-width: 95%;
+        height: 40px;
+        cursor: pointer;
+        border-radius: 5px;
+        border: 1px solid #ccc;
+        padding-left: 15px;
+        outline: none;
+        font-size: 1em;
+        margin-bottom: 15px;
+        border-bottom-width: 4px;
+        transition: all 0.3s ease;
+       }
+       .input:focus,
+       .input:valid{
+        border-color: #9b59b6;
+       }
+       .gender{
+        display: flex;
+        flex-direction: column;
+
+       }
+       .gender>label{
+        margin-bottom: 5px;
+       }
+       .gender>label>input{
+        margin-right: 5px;
+    }
+       
+       h4{
+        font-size: 1em;
+        font-weight: 600;
+        margin-bottom: 20px;
+        
+       }
+       #button{
+        height: 2em;
+        width: 100%;
+        color: #fff;
+        border: none;
+        font-size: 18px;
+        font-weight: 500;
+        border-radius: 5px;
+        letter-spacing: 1px;
+        background: linear-gradient(135deg, #71b7e6, #9b59b6);
+    }
+
+    }
+           
+           
+        
+    
+   
+    
+</style>
+<div class="container">
+   <form class="field">
+     <h3>Registration</h3>
+     <label><p>Full Name</p><input class="input" type="text" placeholder="Enter your name" required></label>
+     <label><p>Username</p><input class="input" type="text" placeholder="Enter your username" required></label>
+     <label><p>Email</p><input class="input" type="email" placeholder="Enter your email" required></label>   
+     <label><p>Phone Number</p><input class="input" type="tel" placeholder="Enter your number" pattern="[0-9]{10}" required></label>
+     <label><p>Password</p><input class="input" type="password" placeholder="Enter your password" required></label>
+     <label><p>Confirm Password</p><input class="input" type="password" placeholder="Confirm password" required></label>
+     <div class="gender">
+        <h4>Gender</h4>
+        <label id="Dot-1"><input type="radio" name="gender" required>Male</label>
+        <label id="Dot-2"><input type="radio" name="gender" required>Female</label>
+        <label id="Dot-3"><input type="radio" name="gender" required>Prefer not to say</label>
+     </div> 
+     <div class="button">
+         <input type="submit" id="button" value="Register">
+     </div>
+    </form>
+   
+</div>
+<body>
+    
+</body>
+</html>
